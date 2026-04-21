@@ -175,17 +175,6 @@ if selected_techs:
             heat_rate_btu_per_kwh=hr_target,
         )
 
-        st.write(
-            {
-                "Technology": TECH_SPECS[tech_for_target].name,
-                "Heat rate used (BTU/kWh)": f"{hr_target:,.0f}",
-                "Target operating kW": f"{target_operating_kw:,.0f}",
-                "Hours/day": hours_per_day,
-                "Required kWh/day": f"{req.required_kwh_per_day:,.0f}",
-                "Required BTU/day": f"{req.required_btu_per_day:,.0f}",
-            }
-        )
-
         out_fuel_type = st.selectbox("Fuel type for output", ["Natural Gas", "Diesel"], index=0)
 
         if out_fuel_type == "Diesel":
