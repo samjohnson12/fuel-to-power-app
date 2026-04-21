@@ -5,9 +5,9 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-from fuel2power.tech import TECH_SPECS
+from src.fuel2power.tech import TECH_SPECS
 
-from fuel2power.units import (
+from src.fuel2power.units import (
     FuelDefaults,
     diesel_gal_per_day_to_btu_per_day,
     mmbtu_per_day_to_btu_per_day,
@@ -18,7 +18,7 @@ from fuel2power.units import (
     btu_per_day_to_dth_per_day,
     btu_per_day_to_mcf_per_day,
 )
-from fuel2power.calc import compute_power, compute_required_fuel_energy
+from src.fuel2power.calc import compute_power, compute_required_fuel_energy
 
 
 st.set_page_config(page_title="Fuel → Power (kW) Calculator", layout="wide")
